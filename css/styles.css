@@ -107,6 +107,7 @@ body {
 }
 
 .section {
+  max-width: 1600px;
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -179,6 +180,8 @@ body {
 /* site-contact */
 
 .contact-link {
+  display: flex;
+  align-items: center;
   color: var(--maintextcolor);
 
   font-weight: 500;
@@ -188,12 +191,27 @@ body {
 
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 }
+
 
 .site-contact .contact-link:hover,
 .site-contact .contact-link:focus {
   color: var(--activecolor);
 }
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--activecolor);
+}
+
+.contact-link:hover svg {
+  fill: var(--activecolor);
+}
+.contact-link:focus svg {
+  fill: var(--activecolor);
+}
+
 .contact-header {
   display: flex;
   align-items: center;
@@ -202,13 +220,17 @@ body {
   margin-bottom: 0px;
   margin-top: 0px;
 }
-.contact-item{
-  display: block;
+
+.contact-mail,
+.contact-phone {
+  margin-right: 10px;
+  fill: var(--maintextcolor);
 }
 .contact-item:not(:last-child) {
   margin-right: 50px;
   padding-left: 0px;
 }
+
 
 /* footer styles */
 .footer {
@@ -253,9 +275,17 @@ body {
 
 /* hero */
 .hero {
-  background-color: var(--second-background);
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(196, 196, 196, 1);
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../images/hero_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
   text-align: center;
 }
 
@@ -285,6 +315,17 @@ body {
 .special {
   margin-left: auto;
   margin-right: auto;
+}
+
+.special-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  background-color: rgba(245, 244, 250, 1);
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 .special-title {
@@ -320,6 +361,8 @@ body {
 
 .about-work {
   padding-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .work-title {
   color: var(--secondtextcolor);
@@ -344,6 +387,8 @@ body {
 /* our team */
 .our-team {
   background-color: rgba(245, 244, 250, 1);
+    margin-left: auto;
+  margin-right: auto;
 }
 .team {
   display: flex;
@@ -386,13 +431,107 @@ body {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  margin: 0px;
+  margin: 0px 0px 16px 0px;
 }
 
 .team-card {
   padding-bottom: 30px;
   padding-top: 30px;
 }
+
+.team-contact-list {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.team-contact-item {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.team-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    width: 44px;
+  height: 44px;
+background-color: transparent;
+}
+.team-link {
+  fill: rgba(175, 177, 184, 1);
+}
+
+.team-contact-item:hover,
+.team-contact-item:focus {
+  background-color: var(--activecolor);
+  border-radius: 50%;
+  border-color: var(--activecolor);
+}
+
+.team-contact-item:hover svg {
+fill: rgba(255, 255, 255, 1);
+}
+.team-contact-item:focus svg {
+fill: rgba(255, 255, 255, 1);
+}
+
+/* our clients */
+.clients {
+    margin-left: auto;
+  margin-right: auto;
+}
+.client-title {
+  color: var(--secondtextcolor);
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 0px;
+}
+
+.client-list {
+  display: flex;
+  justify-content: space-between;
+padding-left: 0px;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+
+.client-item {
+  display: block;
+}
+.client-site {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  
+}
+
+.client-site,
+.client-picture {
+  fill: rgba(175, 177, 184, 1);
+}
+
+.client-site:hover svg {
+  fill: var(--activecolor);
+  cursor: pointer;
+}
+.client-site:focus svg {
+fill: var(--activecolor);
+}
+.client-site:hover,
+.client-site:focus {
+  border-color: var(--activecolor) ;
+}
+
 
 
 /* portfolio exemples */
