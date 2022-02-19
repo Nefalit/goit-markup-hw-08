@@ -22,7 +22,7 @@
         <nav>
           <ul class="site-nav nav-list">
             <li class="nav-item">
-              <a href="./index.html" class="nav-link">Студия</a>
+              <a href="./index.html" class="nav-link ">Студия</a>
             </li>
             <li class="nav-item">
               <a href="./portfolio.html" class="nav-link current">Портфолио</a>
@@ -34,13 +34,19 @@
         </nav>
         <ul class="contact-header">
           <li class="contact-item">
-            <a href="mailto:info@devstudio.com" class="contact-link"
-              >info@devstudio.com</a
+            <a href="mailto:info@devstudio.com" class="contact-link">
+              <svg class="contact-mail" width="16" height="12">
+                <use href="./images/symbol-defs.svg#mail"></use>
+                </svg>
+              info@devstudio.com</a
             >
           </li>
           <li class="contact-item">
-            <a href="tel:+380961111111" class="contact-link"
-              >+38 096 111 11 11</a
+            <a href="tel:+380961111111" class="contact-link">
+              <svg class="contact-phone" width="16" height="12">
+              <use href="./images/symbol-defs.svg#phone"></use>
+                </svg>
+              +38 096 111 11 11</a
             >
           </li>
         </ul>
@@ -172,10 +178,10 @@
     </main>
     <!--footer hw-->
     <footer class="footer">
-      <div class="container">
-        <a href="./index.html" class="logo footer-logo"
-          >Web<span class="accentwhite">Studio</span></a
-        >
+      <div class="container footer-block">
+        <div>
+          <a href="./index.html" class="logo footer-logo"
+            >Web<span class="accentwhite">Studio</span></a>
         <address>
           <ul class="adress-list">
             <li class="adress-item">
@@ -197,6 +203,16 @@
             </li>
           </ul>
         </address>
+        </div>
+        <div class="footer-join">
+          <h2 class="footer-join-title">присоеденяйтесь</h2>
+                <ul class="footer-contact-list">
+                  <li class="footer-contact-item"><a class="footer-social" href="twitter.com"><svg class="footer-icon-link" width="20" height="20"><use href="./images/symbol-defs.svg#instagram"></use></svg></a></li>
+                  <li class="footer-contact-item"><a class="footer-social" href="facebook.com"><svg class="footer-icon-link" width="20" height="20"><use href="./images/symbol-defs.svg#twitter"></use></svg></a></li>
+                  <li class="footer-contact-item"><a class="footer-social" href="linkedin.com"><svg class="footer-icon-link" width="20" height="20"><use href="./images/symbol-defs.svg#facebook"></use></svg></a></li>
+                  <li class="footer-contact-item"><a class="footer-social" href="instagram.com"><svg class="footer-icon-link" width="20" height="20"><use href="./images/symbol-defs.svg#linkedin"></use></svg></a></li>
+                </ul>
+        </div>
       </div>
     </footer>
   </body>
