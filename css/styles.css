@@ -258,6 +258,8 @@ body {
 .contact-phone {
   margin-right: 10px;
   fill: var(--maintextcolor);
+  transition: fill var(--duration) var(--timing-function);
+
 }
 .contact-item:not(:last-child) {
   margin-right: 50px;
