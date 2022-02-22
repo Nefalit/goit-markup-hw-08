@@ -416,6 +416,8 @@ body {
   border-radius: 4px;
   background-color: inherit;
   outline: none;
+  transition: border-color var(--duration) var(--timing-function);
+
 }
 
 .subscribe-input:focus {
@@ -964,6 +966,8 @@ body {
   left: 12px;
 
   fill: var(--secondtextcolor);
+  transition: fill var(--duration) var(--timing-function);
+
 }
 
 .form-input:focus + .form-icon {
