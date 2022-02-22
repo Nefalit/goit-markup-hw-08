@@ -51,7 +51,7 @@ ul {
 
   font-family: inherit;
 }
-.button.primary {
+.primary {
   color: var(--whitetextcolor);
   background-color: var(--activecolor);
 
@@ -277,6 +277,9 @@ body {
   display: flex;
   align-items: baseline;
 }
+.logo-box {
+  padding-right: 12px;
+}
 .footer-logo {
   display: block;
   margin-bottom: 20px;
@@ -369,6 +372,69 @@ body {
 
 .footer-icon-link {
   fill: var(--third-background);
+}
+
+.subscribe-form {
+  margin-left: 93px;
+}
+
+.subscribe-title {
+  margin-top: 0px;
+  margin-bottom: 20px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--whitetextcolor);
+}
+
+.subscribe-box {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-right: 12px;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: inherit;
+  outline: none;
+}
+
+.subscribe-input:focus {
+  border-color: var(--activecolor);
+}
+
+.subscribe-button {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  justify-content: center;
+  padding: 10px 28px 10px 29px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.subscribe-button span {
+  margin-right: 10px;
+}
+
+.subscribe-svg {
+  fill: var(--whitetextcolor);
 }
 
 /* index style */
@@ -803,7 +869,8 @@ body {
   position: relative;
 
   width: 528px;
-  height: 581px;
+  /* height: 581px; */
+  padding: 40px;
 
   background-color: var(--whitetextcolor);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -832,4 +899,139 @@ body {
   opacity: 0;
   transform: scale(0);
   pointer-events: none;
+}
+
+.modal-title {
+  margin-top: 0px;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--secondtextcolor);
+}
+
+.form {
+}
+
+.form-item {
+  margin-bottom: 10px;
+}
+
+.form-item:last-of-type {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--maintextcolor);
+}
+
+.form-box {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  padding: 11px 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  transition: border-color var(--duration) var(--timing-function);
+}
+
+.form-input:focus,
+.form-text:focus {
+  border-color: var(--activecolor);
+}
+
+.form-icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+
+  fill: var(--secondtextcolor);
+}
+
+.form-input:focus + .form-icon {
+  fill: var(--activecolor);
+  transition: fill var(--duration) var(--timing-function);
+}
+
+.form-text {
+  width: 100%;
+  max-height: 120px;
+  padding: 12px 16px;
+  resize: none;
+
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: var(--secondtextcolor);
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  transition: border-color var(--duration) var(--timing-function);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  /* outline: 2px solid red; */
+}
+
+.checkbox-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 16px;
+  height: 15px;
+
+  margin-right: 7px;
+
+  border: 2px solid var(--secondtextcolor);
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.form-checkbox:checked + .checkbox-icon {
+  border: transparent;
+  background-color: #2196f3;
+  background-image: url("../images/icon-check.svg");
+  background-repeat: no-repeat;
+}
+
+.form-confirm {
+  display: block;
+  font-size: 14px;
+  line-height: 1.72;
+  letter-spacing: 0.03em;
+  color: var(--maintextcolor);
+}
+
+.confirm-link {
+  color: var(--activecolor);
+  text-decoration: underline;
+}
+
+.form-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 55px;
+  border-color: transparent;
+  border-radius: 4px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
