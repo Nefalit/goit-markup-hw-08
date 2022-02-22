@@ -725,9 +725,10 @@ body {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: border-color var(--duration) var(--timing-function);
+
 }
 
-.client-site,
 .client-picture {
   fill: rgba(175, 177, 184, 1);
   transition: fill var(--duration) var(--timing-function);
