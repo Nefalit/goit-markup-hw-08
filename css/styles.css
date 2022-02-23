@@ -14,6 +14,7 @@
   --background: #e5e5e5;
   --second-background: #2f303a;
   --third-background: #f5f4fa;
+  --black-color: #000000;
   --main-font: Roboto;
   --duration: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -884,6 +885,7 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+
 .modal-button {
   position: absolute;
   top: 8px;
@@ -899,6 +901,15 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.modal-button:hover .modal-close,
+.modal-button:focus .modal-close {
+  fill: var(--activecolor);
+}
+
+.modal-close {
+  fill: var(--black-color);
 }
 
 .is-hidden {
