@@ -1,0 +1,59 @@
+.button {
+  color: var(--secondtextcolor);
+  background-color: var(--third-background);
+
+  font-family: inherit;
+  &__one {
+  color: var(--whitetextcolor);
+  background-color: var(--activecolor);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  border-radius: 4px;
+  border-style: none;
+
+  cursor: pointer;
+  }
+  &__two {
+  color: var(--secondtextcolor);
+  background-color: var(--third-background);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+
+  cursor: pointer;
+
+  height: 38px;
+  width: auto;
+  top: 174px;
+  border-radius: 4px;
+  padding: 6px 22px;
+
+  border-radius: 4px;
+  background: rgba(245, 244, 250, 1);
+  border: none;
+
+  transition: color var(--duration) var(--timing-function),
+  background-color var(--duration) var(--timing-function),
+  box-shadow var(--duration) var(--timing-function);
+  }
+  &__two:focus{
+        color: var(--whitetextcolor);
+  background-color: var(--activecolor);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+  &__two:hover {
+        color: var(--whitetextcolor);
+  background-color: var(--activecolor);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}

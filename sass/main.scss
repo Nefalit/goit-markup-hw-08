@@ -1,0 +1,19 @@
+//Variables style
+@import './utils/variables';
+
+//Common styles
+@import './components/common';
+@import './components/_logo';
+@import './components/button';
+
+//Component styles
+@import './components/modal';
+@import './components/modal-form';
+@import './components/header';
+@import './components/hero';
+@import './components/special';
+@import './components/about-work';
+@import './components/our-team';
+@import './components/our-clients';
+@import './components/work-exemple';
+@import './components/footer';

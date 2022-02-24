@@ -1,0 +1,40 @@
+.special {
+    &__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  background-color: rgba(245, 244, 250, 1);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+&__title {
+  color: var(--secondtextcolor);
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin: 0px 0px 10px 0px;
+}
+&__list {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline-start: 0px;
+  margin: 0px;
+}
+&__type:not(:last-child) {
+  display: block;
+  margin-right: 30px;
+}
+&__item {
+  width: 270px;
+  color: var(--maintextcolor);
+
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0px;
+}
+}
