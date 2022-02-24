@@ -1,0 +1,85 @@
+.our__team {
+  background-color: rgba(245, 244, 250, 1);
+}
+.team {
+  display: flex;
+  &__member:not(:last-child) {
+  margin-right: 30px;
+}
+&__member {
+  display: block;
+  background-color: var(--whitetextcolor);
+  width: 270px;
+  left: 815px;
+  top: 1635px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+&__title {
+  color: var(--secondtextcolor);
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin: 0px 0px 50px 0px;
+}
+&__personal-title {
+  color: var(--secondtextcolor);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  margin: 0px 0px 10px 0px;
+}
+&__personal-position {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  margin: 0px 0px 16px 0px;
+}
+&__card {
+  padding: 30px 32px;
+}
+&__contact-list {
+  display: flex;
+  justify-content: space-between;
+}
+&__contact-item {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+&__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color var(--duration) var(--timing-function);
+}
+&__link {
+  fill: rgba(175, 177, 184, 1);
+  transition: fill var(--duration) var(--timing-function);
+}
+&__social:focus {
+  background-color: var(--activecolor);
+  border-radius: 50%;
+  border-color: var(--activecolor);
+}
+&__social:hover {
+  background-color: var(--activecolor);
+  border-radius: 50%;
+  border-color: var(--activecolor);
+}
+&__contact-item:hover .team__link {
+  fill: var(--whitetextcolor);
+}
+&__contact-item:focus .team__link {
+  fill: var(--whitetextcolor);
+}
+}
