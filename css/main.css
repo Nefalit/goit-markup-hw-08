@@ -62,7 +62,6 @@ body {
 }
 
 .section {
-  max-width: 1600px;
   padding-top: 94px;
   padding-bottom: 94px;
   margin-left: auto;
@@ -820,7 +819,6 @@ body {
 }
 
 .footer {
-  max-width: 1600px;
   background-color: var(--second-background);
   padding-top: 60px;
   padding-bottom: 60px;
