@@ -1,5 +1,9 @@
 .about-work {
   padding-top: 0px;
+  @include mq(notDesktop) {
+    display: none;
+
+  }
 }
 .work {
     &__title {

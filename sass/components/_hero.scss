@@ -11,11 +11,27 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero_bg.jpg);
+    url(../images/hero/hero_bg.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
   text-align: center;
+  @include mq(mobile-only) {
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero/hero_bg480.jpg); }
+  @include mq(tablet-only) {
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero/hero_bg768.jpg);
+  }
+  
   &__button {
   padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -28,8 +44,12 @@
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 696px;
+  max-width: 696px;
   margin: 0 auto;
   margin-bottom: 30px;
+  @include mq(notDesktop) {
+font-size: 26px;
+max-width: 360px;
+  }
 }
 }

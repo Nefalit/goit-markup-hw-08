@@ -5,8 +5,15 @@
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
+  @include mq(notDesktop) {
+      font-size: 24px;
+  }
   &__header {
-      margin-right: 93px;}
+      margin-right: 93px;
+    @include mq(tablet-only) {
+        margin-right: auto;
+    } 
+}
   &__text-header {
       color: var(--secondtextcolor);
   }

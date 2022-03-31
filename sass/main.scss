@@ -1,5 +1,6 @@
 //Variables style
 @import './utils/variables';
+@import './utils/mixins';
 
 //Common styles
 @import './base/common';
@@ -10,6 +11,7 @@
 @import './components/modal';
 @import './components/modal-form';
 @import './components/header';
+@import './components/mobile-menu';
 @import './components/hero';
 @import './components/special';
 @import './components/about-work';
