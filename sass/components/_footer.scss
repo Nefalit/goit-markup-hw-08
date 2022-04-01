@@ -60,12 +60,9 @@
 }
 &__join {
   margin-left: 70px;
-  @include mq(mobile-only) {
+  @include mq(notDesktop) {
     margin-left: auto;
     margin-right: auto;
-  }
-  @include mq(tablet-only) {
-    margin: 0px;
   }
 }
 &__join-title {
@@ -124,9 +121,7 @@
 .footer__wrapper {
   margin-left: auto;
   margin-right: auto;
-  @include mq(notDesktop) {
-    margin-bottom: 60px;
-  }
+
   @include mq(tablet-only) {
     display: flex;
     justify-content: space-around;

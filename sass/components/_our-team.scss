@@ -56,12 +56,13 @@
 }
 &__contact-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 &__contact-item {
   display: flex;
   justify-content: center;
   align-content: center;
+  margin-right: 10px;
 }
 &__social {
   display: flex;

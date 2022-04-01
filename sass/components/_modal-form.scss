@@ -79,6 +79,9 @@
   line-height: 1.72;
   letter-spacing: 0.03em;
   color: var(--maintextcolor);
+  @include mq(notDesktop) {
+    font-size: 12px;
+  }
 }
 }
 .checkbox {
@@ -87,12 +90,13 @@
   justify-content: center;
   margin-bottom: 30px;
   &__icon {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
 
   width: 16px;
   height: 15px;
+  min-width: 16px;
 
   margin-right: 7px;
 

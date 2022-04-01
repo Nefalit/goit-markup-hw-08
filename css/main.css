@@ -132,7 +132,7 @@ body {
   padding-right: 12px;
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 1199.98px) {
   .logo__box {
     padding: 0px;
     text-align: center;
@@ -201,6 +201,7 @@ body {
 .backdrop {
   position: fixed;
   top: 0;
+  z-index: 12;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -346,6 +347,12 @@ body {
   color: var(--maintextcolor);
 }
 
+@media screen and (max-width: 1199.98px) {
+  .form__confirm {
+    font-size: 12px;
+  }
+}
+
 .checkbox {
   display: flex;
   align-items: center;
@@ -354,11 +361,12 @@ body {
 }
 
 .checkbox__icon {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   width: 16px;
   height: 15px;
+  min-width: 16px;
   margin-right: 7px;
   border: 2px solid var(--secondtextcolor);
   border-radius: 4px;
@@ -390,11 +398,9 @@ body {
 }
 
 .header__btn {
-  position: absolute;
   top: 10px;
   right: 15px;
   margin-left: auto;
-  margin-right: 15px;
   padding: 0;
   background-color: transparent;
   border: none;
@@ -431,6 +437,10 @@ body {
   .header__btn {
     display: none;
   }
+}
+
+.header .header__btn.is-open {
+  position: fixed;
 }
 
 .header__btn-open {
@@ -665,7 +675,7 @@ body {
 }
 
 .mobile-menu__tel {
-  font-size: 34px;
+  font-size: 30px;
   line-height: 1.18;
   color: var(--activecolor);
   margin-bottom: 32px;
@@ -696,7 +706,7 @@ body {
 }
 
 .mobile-menu__link-item {
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0.02em;
   color: var(--activecolor);
 }
@@ -727,6 +737,13 @@ body {
   background-position: 50% 50%;
   background-size: cover;
   text-align: center;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -959,13 +976,14 @@ body {
 
 .team__contact-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .team__contact-item {
   display: flex;
   justify-content: center;
   align-content: center;
+  margin-right: 10px;
 }
 
 .team__social {
@@ -1138,7 +1156,8 @@ body {
 }
 
 .example__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   color: var(--maintextcolor);
   transition: box-shadow var(--duration) var(--timing-function);
 }
@@ -1152,6 +1171,7 @@ body {
 }
 
 .example__card {
+  flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
@@ -1182,6 +1202,31 @@ body {
   color: var(--whitetextcolor);
 }
 
+@media screen and (max-width: 767.98px) {
+  .example__overlay {
+    padding: 77px 24px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .example__overlay {
+    padding: 49px 24px 77px 24px;
+  }
+}
+
+@media screen and (max-width: 354px) {
+  .example__overlay {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .example__overlay {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
 .example__item:hover .example__overlay {
   transform: translateY(0%);
   opacity: 1;
@@ -1190,6 +1235,10 @@ body {
 .example__item:focus .example__overlay {
   transform: translateY(0%);
   opacity: 1;
+}
+
+.example__item {
+  display: flex;
 }
 
 .footer {
@@ -1270,16 +1319,10 @@ body {
   margin-left: 70px;
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 1199.98px) {
   .footer__join {
     margin-left: auto;
     margin-right: auto;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .footer__join {
-    margin: 0px;
   }
 }
 
@@ -1351,12 +1394,6 @@ body {
 .footer__wrapper {
   margin-left: auto;
   margin-right: auto;
-}
-
-@media screen and (max-width: 1199.98px) {
-  .footer__wrapper {
-    margin-bottom: 60px;
-  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
