@@ -20,7 +20,78 @@
         <a href="./index.html" class="logo logo__header"
           >Web<span class="logo__text-header">Studio</span></a
         >
-        <nav>
+        <button
+          class="header__btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-button
+        >
+          <svg class="header__btn-icon" width="40px" height="40px">
+            <use
+              class="header__btn-open"
+              href="./images/symbol-defs.svg#menu_burger"
+            ></use>
+            <use
+              class="header__btn-close"
+              href="./images/symbol-defs.svg#close_burger"
+            ></use>
+          </svg>
+        </button>
+        <div class="mobile-menu" id="mobile-menu" data-menu>
+          <div class="mobile-menu__wrapper">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a href="./index.html" class="mobile-menu__link"
+                  >Студия</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a href="./portfolio.html" class="mobile-menu__link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a href="./contact.html" class="mobile-menu__link current">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__point">
+                <a href="tel:+380961111111" class="mobile-menu__tel"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@devstudio.com" class="mobile-menu_mail"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-menu__links">
+              <li class="mobile-menu__social">
+                <a href="instagram.com" class="mobile-menu__link-item"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobile-menu__social">
+                <a href="twitter.com" class="mobile-menu__link-item">Twitter</a>
+              </li>
+              <li class="mobile-menu__social">
+                <a href="facebook.com" class="mobile-menu__link-item"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mobile-menu__social">
+                <a href="linkedin.com" class="mobile-menu__link-item"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="./index.html" class="nav__link">Студия</a>
@@ -57,13 +128,14 @@
       <section class="section">
         <div class="container">
           <h1>content contact</h1>
-          <video src="./videos/fishing.mp4" width="400" controls></video>
+          <video src="./videos/fishing.mp4" max-width="400" controls></video>
         </div>
       </section>
     </main>
     <!--footer hw-->
     <footer class="footer">
       <div class="container footer__block">
+        <div class="footer__wrapper">
         <div class="logo__box">
           <a href="./index.html" class="logo logo__footer"
             >Web<span class="logo__text-footer">Studio</span></a
@@ -123,6 +195,7 @@
             </li>
           </ul>
         </div>
+        </div>
         <form class="subscribe__form" name="subscribe" autocomplete="off">
           <p class="subscribe__title">Подпишитесь на рассылку</p>
           <div class="subscribe__box">
@@ -142,5 +215,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

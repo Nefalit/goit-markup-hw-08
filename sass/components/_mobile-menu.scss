@@ -15,16 +15,17 @@
      right: 0;
      z-index: 0;
 
-     transform: translateY(-100%);
+     transform: translateX(100%);
+     transition: transform 300ms ease-in-out;
      opacity: 0;
-     transition: transform cubic-bezier(0.4, 1, 0.320, 1);
-
+     
      padding-left: 40px;
      padding-top: 48px;
      padding-bottom: 48px;
  &.is-open {
-    transform: translateY(0);
-    opacity: 100%;
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 10;
     @include mq(tablet) {
         display: none;
     }
@@ -71,6 +72,10 @@ line-height: 1.18;
 letter-spacing: 0.02em;
 color: var(--secondtextcolor);
 }
+.mobile-menu__link.current {
+    color: var(--activecolor);
+}
+
 .mobile-menu__links{
     display: flex;
     flex-wrap: wrap;

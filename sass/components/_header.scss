@@ -1,12 +1,12 @@
 .header {
   background-color: var(--whitetextcolor);
   border-bottom: 1px solid #ececec;
-   @include mq(mobile-only) {
-    background-color: aqua;
-   }
-   @include mq (tablet-only) {
-    background-color: rgb(241, 167, 154);
-   }
+  //  @include mq(mobile-only) {
+  //   background-color: aqua;
+  //  }
+  //  @include mq (tablet-only) {
+  //   background-color: rgb(241, 167, 154);
+  //  }
 
   &__container {
   display: flex;
@@ -22,36 +22,76 @@
   position: absolute;
   top: 10px;
   right: 15px;
-  z-index: 1;
+  margin-left: auto;
+  margin-right: 15px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  z-index: 11;
+
+  &:hover .header__btn-open {
+    fill: var(--activecolor);
+    transition: fill var(--duration) var(--timing-function);
+  }
+  &:focus .header__btn-open {
+    fill: var(--activecolor);
+    transition: fill var(--duration) var(--timing-function);
+  }
+  &:hover .header__btn-close {
+    fill: var(--activecolor);
+    transition: fill var(--duration) var(--timing-function);
+  }
+  &:focus .header__btn-close {
+    fill: var(--activecolor);
+    transition: fill var(--duration) var(--timing-function);
+  }
+
   & is-open {
   position: fixed;
   top: 0;
   right: 21px;
-
   }
     @include mq (tablet) {
       display: none;
     }
+  }
 
-    margin-left: auto;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-  }
-  &__btn-close {
-    display: none;
-  }
-  &__btn-icon {
-    fill: var(--secondtextcolor);
-    transition: fill var(--duration) var(--timing-function);
-  }
-  &__btn-icon:hover {
-    fill: var(--activecolor);
-  }
-  &__btn-icon:focus {
-    fill: var(--activecolor);
-  }
+  // &__btn-icon {
+  //   fill: var(--secondtextcolor);
+  //   transition: fill var(--duration) var(--timing-function);
+  // }
 }
+.header__btn-open {
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+  //   &:hover {
+  //   fill: var(--activecolor);
+  // }
+  // &:focus {
+  //   fill: var(--activecolor);
+  // }
+}
+
+.header__btn-close {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  // &:hover {
+  //   fill: var(--activecolor);
+  // }
+  // &:focus {
+  //   fill: var(--activecolor);
+  // }
+}
+
+.header__btn.is-open .header__btn-open {
+  opacity: 0;
+}
+.header__btn.is-open .header__btn-close {
+  opacity: 1;
+}
+
+
 .current {
   position: relative;
   color: var(--activecolor);

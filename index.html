@@ -142,7 +142,7 @@
         </div>
       </section>
       <!--special-->
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Особенности компании</h2>
           <ul class="special__list">
@@ -196,7 +196,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--about work-->
       <section class="about-work section">
         <div class="container">
@@ -236,15 +236,27 @@
         </div>
       </section>
       <!--our team-->
-      <!-- <section class="our-team section">
+      <section class="our-team section">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
           <ul class="team">
             <li class="team__member">
-              <img src="./images/our_team/igor.jpg" alt="Игорь Демьяненко" width="270" />
+              <picture>
+                <source srcset="../images/our_team/igor.jpg" media="(min-width: 1200px)">
+                <source srcset="../images/our_team/igor-354.jpg" media="(min-width: 768px)">
+                <source srcset="../images/our_team/igor-450.jpg" media="(max-width: 767.98px)">
+                 <img 
+                src="../images/our_team/igor.jpg"
+                alt="Игорь Демьяненко"
+                width="100%"
+              />             
+              </picture>
+
               <div class="team__card">
                 <h3 class="team__personal-title">Игорь Демьяненко</h3>
-                <p lang="en" class="team__personal-position">Product Designer</p>
+                <p lang="en" class="team__personal-position">
+                  Product Designer
+                </p>
                 <ul class="team__contact-list">
                   <li class="team__contact-item">
                     <a class="team__social" href="twitter.com"
@@ -278,10 +290,22 @@
               </div>
             </li>
             <li class="team__member">
-              <img src="./images/our_team/olga.jpg" alt="Ольга Репина" width="270" />
+              <picture>
+                <source srcset="../images/our_team/olga.jpg" media="(min-width: 1200px)">
+                <source srcset="../images/our_team/olga-354.jpg" media="(min-width: 768px)">
+                <source srcset="../images/our_team/olga-450.jpg" media="(max-width: 767.98px)">
+              <img 
+                src="../images/our_team/olga.jpg"
+                alt="Ольга Репина"
+                width="100%"
+              />                
+              </picture>
+
               <div class="team__card">
                 <h3 class="team__personal-title">Ольга Репина</h3>
-                <p lang="en" class="team__personal-position">Frontend Developer</p>
+                <p lang="en" class="team__personal-position">
+                  Frontend Developer
+                </p>
                 <ul class="team__contact-list">
                   <li class="team__contact-item">
                     <a class="team__social" href="twitter.com"
@@ -315,11 +339,17 @@
               </div>
             </li>
             <li class="team__member">
-              <img
-                src="./images/our_team/nikola.jpg"
+              <picture>
+                <source srcset="../images/our_team/nikola.jpg" media="(min-width: 1200px)">
+                <source srcset="../images/our_team/nikola-354.jpg" media="(min-width: 768px)">
+                <source srcset="../images/our_team/nikola-450.jpg" media="(max-width: 767.98px)">
+               <img 
+                src="../images/our_team/nikola.jpg"
                 alt="Николай Тарасов"
-                width="270"
-              />
+                width="100%"
+              />               
+              </picture>
+
               <div class="team__card">
                 <h3 class="team__personal-title">Николай Тарасов</h3>
                 <p lang="en" class="team__personal-position">Marketing</p>
@@ -356,7 +386,17 @@
               </div>
             </li>
             <li class="team__member">
-              <img src="./images/our_team/mike.jpg" alt="Михаил Ермаков" width="270" />
+              <picture>
+                <source srcset="../images/our_team/mike.jpg" media="(min-width: 1200px)">
+                <source srcset="../images/our_team/mike-354.jpg" media="(min-width: 768px)">
+                <source srcset="../images/our_team/mike-450.jpg" media="(max-width: 767.98px)">
+              <img 
+                src="../images/our_team/mike.jpg"
+                alt="Михаил Ермаков"
+                width="100%"
+              />                
+              </picture>
+
               <div class="team__card">
                 <h3 class="team__personal-title">Михаил Ермаков</h3>
                 <p lang="en" class="team__personal-position">UI Designer</p>
@@ -394,9 +434,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- our clients -->
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="client__title">Постоянные клиенты</h2>
           <ul class="client__list">
@@ -444,11 +484,12 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
     <!--footer hw-->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__block">
+        <div class="footer__wrapper">
         <div class="logo__box">
           <a href="./index.html" class="logo logo__footer"
             >Web<span class="logo__text-footer">Studio</span></a
@@ -508,6 +549,7 @@
             </li>
           </ul>
         </div>
+        </div>
         <form class="subscribe__form" name="subscribe" autocomplete="off">
           <p class="subscribe__title">Подпишитесь на рассылку</p>
           <div class="subscribe__box">
@@ -526,7 +568,7 @@
           </div>
         </form>
       </div>
-    </footer> -->
+    </footer>
     <!-- modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">

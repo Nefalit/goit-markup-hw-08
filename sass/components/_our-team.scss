@@ -2,16 +2,24 @@
   background: #F5F4FA;
 }
 .team {
-  display: flex;
-  &__member:not(:last-child) {
-  margin-right: 30px;
-}
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+   @include mq(mobile-only) {
+    grid-template-columns: repeat(1, 1fr);
+   }
+
+   @include mq(tablet-only) {
+    grid-template-columns: repeat(2, 1fr);
+   }
 &__member {
   display: block;
   background-color: var(--whitetextcolor);
-  width: 270px;
-  left: 815px;
-  top: 1635px;
+  width: 100%;
+
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -24,6 +32,9 @@
   line-height: 1.17;
   text-align: center;
   margin: 0px 0px 50px 0px;
+  @include mq(notDesktop) {
+    font-size: 28px;
+  }
 }
 &__personal-title {
   color: var(--secondtextcolor);

@@ -1,13 +1,22 @@
 .filter {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 0px;
   margin-top: 0px;
   margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
+  @include mq(mobile-only) {
+   justify-content: left;
+   margin-bottom: 40px;
+  }
+
   &__item:not(:last-child) {
   margin-right: 8px;
+  @include mq(mobile-only) {
+    margin-bottom: 15px;
+  }
 }
 }
 .example {
@@ -26,18 +35,18 @@
   margin: 0px;
 }
 &__list {
-  display: flex;
-  flex-wrap: wrap;
-}
-&__item {
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-&__item:nth-child(3n) {
-  margin-right: 0px;
-}
-&__item:nth-child(n + 7) {
-  margin-bottom: 0px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(1, 1fr);
+
+  @include mq(tablet-only) {
+  grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mq(desktop) {
+  grid-template-columns: repeat(3, 1fr);
+
+  }
 }
 &__link {
   display: block;
@@ -61,8 +70,7 @@
 &__box {
   position: relative;
   overflow: hidden;
-  width: 370px;
-  height: 294px;
+  width: 100%;
 }
 &__overlay {
   position: absolute;

@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -19,7 +22,76 @@
         <a href="./index.html" class="logo logo__header"
           >Web<span class="logo__text-header">Studio</span></a
         >
-        <nav>
+        <button
+          class="header__btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-button
+        >
+          <svg class="header__btn-icon" width="40px" height="40px">
+            <use
+              class="header__btn-open"
+              href="./images/symbol-defs.svg#menu_burger"
+            ></use>
+            <use
+              class="header__btn-close"
+              href="./images/symbol-defs.svg#close_burger"
+            ></use>
+          </svg>
+        </button>
+        <div class="mobile-menu" id="mobile-menu" data-menu>
+          <div class="mobile-menu__wrapper">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a href="./index.html" class="mobile-menu__link">Студия</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="./portfolio.html" class="mobile-menu__link current"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a href="./contact.html" class="mobile-menu__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__point">
+                <a href="tel:+380961111111" class="mobile-menu__tel"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@devstudio.com" class="mobile-menu_mail"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-menu__links">
+              <li class="mobile-menu__social">
+                <a href="instagram.com" class="mobile-menu__link-item"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobile-menu__social">
+                <a href="twitter.com" class="mobile-menu__link-item">Twitter</a>
+              </li>
+              <li class="mobile-menu__social">
+                <a href="facebook.com" class="mobile-menu__link-item"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mobile-menu__social">
+                <a href="linkedin.com" class="mobile-menu__link-item"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="./index.html" class="nav__link">Студия</a>
@@ -56,34 +128,53 @@
     <main>
       <section class="section">
         <div class="container">
-          <!--h1 hide css-->
           <h1 class="visually-hidden">work examples</h1>
           <ul class="filter">
             <li class="filter__item">
               <button class="button button__two" type="button">Все</button>
             </li>
             <li class="filter__item">
-              <button class="button button__two" type="button">Веб-сайты</button>
+              <button class="button button__two" type="button">
+                Веб-сайты
+              </button>
             </li>
             <li class="filter__item">
-              <button class="button button__two" type="button">Приложения</button>
+              <button class="button button__two" type="button">
+                Приложения
+              </button>
             </li>
             <li class="filter__item">
               <button class="button button__two" type="button">Дизайн</button>
             </li>
             <li class="filter__item">
-              <button class="button button__two" type="button">Маркетинг</button>
+              <button class="button button__two" type="button">
+                Маркетинг
+              </button>
             </li>
           </ul>
           <ul class="example__list">
             <li class="example__item">
               <a class="example__link" href="./">
                 <div class="example__box">
-                  <img
-                    src="./images/portfolio/technokr.jpg"
-                    alt="Технокряк"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="../images/portfolio/technokr.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="../images/portfolio/technokr-354.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="../images/portfolio/technokr-450.jpg"
+                      media="(max-width: 767.98px)"
+                    />
+                    <img
+                      src="../images/portfolio/technokr.jpg"
+                      alt="Технокряк"
+                    />
+                  </picture>
+
                   <div class="example__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -102,11 +193,28 @@
             <li class="example__item">
               <a class="example__link" href="./">
                 <div class="example__box">
-                  <img
-                    src="./images/portfolio/poster_neworl_vs_goldstar.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="../images/portfolio/poster_neworl_vs_goldstar.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ../images/portfolio/poster_neworl_vs_goldstar-354.jpg
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ../images/portfolio/poster_neworl_vs_goldstar-450.jpg
+                      "
+                      media="(max-width: 767.98px)"
+                    />
+                    <img
+                      src="./images/portfolio/poster_neworl_vs_goldstar.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                    />
+                  </picture>
                   <div class="example__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -127,11 +235,25 @@
             <li class="example__item">
               <a class="example__link" href="./">
                 <div class="example__box">
-                  <img
-                    src="./images/portfolio/restoraunt_seafood.jpg"
-                    alt="Ресторан Seafood"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="../images/portfolio/restoraunt_seafood.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="../images/portfolio/restoraunt_seafood-354.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="../images/portfolio/restoraunt_seafood-450.jpg"
+                      media="(max-width: 767.98px)"
+                    />
+                    <img
+                      src="./images/portfolio/restoraunt_seafood.jpg"
+                      alt="Ресторан Seafrestoraunt_seafood"
+                    />
+                  </picture>
+
                   <div class="example__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -150,11 +272,25 @@
             <li class="example__item">
               <a class="example__link" href="./">
                 <div class="example__box">
-                  <img
-                    src="./images/portfolio/project_prime.jpg"
-                    alt="Проект Prime"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="../images/portfolio/project_prime.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="../images/portfolio/project_prime-354.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="../images/portfolio/project_prime-450.jpg"
+                      media="(max-width: 767.98px)"
+                    />
+                    <img
+                      src="./images/portfolio/project_prime.jpg"
+                      alt="Проект Prime"
+                    />
+                  </picture>
+
                   <div class="example__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -173,11 +309,25 @@
             <li class="example__item">
               <a class="example__link" href="./">
                 <div class="example__box">
-                  <img
-                    src="./images/portfolio/project_boxes.jpg"
-                    alt="Проект Boxes"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="../images/portfolio/project_boxes.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="../images/portfolio/project_boxes-354.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="../images/portfolio/project_boxes-450.jpg"
+                      media="(max-width: 767.98px)"
+                    />
+                    <img
+                      src="./images/portfolio/project_boxes.jpg"
+                      alt="Проект Boxes"
+                    />
+                  </picture>
+
                   <div class="example__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -196,11 +346,31 @@
             <li class="example__item">
               <a class="example__link" href="./">
                 <div class="example__box">
-                  <img
-                    src="./images/portfolio/inspiration_has_no_borders.jpg"
-                    alt="Inspiration has no Borders"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ../images/portfolio/inspiration_has_no_borders.jpg
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ../images/portfolio/inspiration_has_no_borders-354.jpg
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ../images/portfolio/inspiration_has_no_borders-450.jpg
+                      "
+                      media="(max-width: 767.98px)"
+                    />
+                    <img
+                      src="./images/portfolio/inspiration_has_no_borders.jpg"
+                      alt="Inspiration has no Borders"
+                    />
+                  </picture>
+
                   <div class="example__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -221,11 +391,25 @@
             <li class="example__item">
               <a class="example__link" href="./">
                 <div class="example__box">
-                  <img
-                    src="./images/portfolio/limited_idition.jpg"
-                    alt="Издание Limited Edition"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="../images/portfolio/limited_idition.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="../images/portfolio/limited_idition-354.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="../images/portfolio/limited_idition-450.jpg"
+                      media="(max-width: 767.98px)"
+                    />
+                    <img
+                      src="./images/portfolio/limited_idition.jpg"
+                      alt="Издание Limited Edition"
+                    />
+                  </picture>
+
                   <div class="example__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -244,11 +428,25 @@
             <li class="example__item">
               <a class="example__link" href="./">
                 <div class="example__box">
-                  <img
-                    src="./images/portfolio/project_lab.jpg"
-                    alt="Проект LAB"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="../images/portfolio/project_lab.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="../images/portfolio/project_lab-354.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="../images/portfolio/project_lab-450.jpg"
+                      media="(max-width: 767.98px)"
+                    />
+                    <img
+                      src="./images/portfolio/project_lab.jpg"
+                      alt="Проект LAB"
+                    />
+                  </picture>
+
                   <div class="example__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -267,11 +465,25 @@
             <li class="example__item">
               <a class="example__link" href="./">
                 <div class="example__box">
-                  <img
-                    src="./images/portfolio/growing_business.jpg"
-                    alt="Growing Business"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="../images/portfolio/growing_business.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="../images/portfolio/growing_business-354.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="../images/portfolio/growing_business-450.jpg"
+                      media="(max-width: 767.98px)"
+                    />
+                    <img
+                      src="./images/portfolio/growing_business.jpg"
+                      alt="Growing Business"
+                    />
+                  </picture>
+
                   <div class="example__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -294,64 +506,66 @@
     <!--footer hw-->
     <footer class="footer">
       <div class="container footer__block">
-        <div class="logo__box">
-          <a href="./index.html" class="logo logo__footer"
-            >Web<span class="logo__text-footer">Studio</span></a
-          >
-          <address>
-            <ul>
-              <li class="footer__item">
-                <a
-                  href="https://goo.gl/maps/XMWMVRejnvmh2yPAA"
-                  class="footer__address"
-                  >г. Киев, пр-т Леси Украинки, 26 </a
-                >
+        <div class="footer__wrapper">
+          <div class="logo__box">
+            <a href="./index.html" class="logo logo__footer"
+              >Web<span class="logo__text-footer">Studio</span></a
+            >
+            <address>
+              <ul>
+                <li class="footer__item">
+                  <a
+                    href="https://goo.gl/maps/XMWMVRejnvmh2yPAA"
+                    class="footer__address"
+                    >г. Киев, пр-т Леси Украинки, 26
+                  </a>
+                </li>
+                <li class="footer__item">
+                  <a href="mailto:info@example.com" class="footer__contact"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="footer__item">
+                  <a href="tel:+380991111111" class="footer__contact"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer__join">
+            <p class="footer__join-title">присоеденяйтесь</p>
+            <ul class="footer__contact-list">
+              <li class="footer__contact-item">
+                <a class="footer__social" href="twitter.com"
+                  ><svg class="footer__icon-link" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer__item">
-                <a href="mailto:info@example.com" class="footer__contact"
-                  >info@example.com</a
-                >
+              <li class="footer__contact-item">
+                <a class="footer__social" href="facebook.com"
+                  ><svg class="footer__icon-link" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer__item">
-                <a href="tel:+380991111111" class="footer__contact"
-                  >+38 099 111 11 11</a
-                >
+              <li class="footer__contact-item">
+                <a class="footer__social" href="linkedin.com"
+                  ><svg class="footer__icon-link" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__contact-item">
+                <a class="footer__social" href="instagram.com"
+                  ><svg class="footer__icon-link" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer__join">
-          <p class="footer__join-title">присоеденяйтесь</p>
-          <ul class="footer__contact-list">
-            <li class="footer__contact-item">
-              <a class="footer__social" href="twitter.com"
-                ><svg class="footer__icon-link" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer__contact-item">
-              <a class="footer__social" href="facebook.com"
-                ><svg class="footer__icon-link" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer__contact-item">
-              <a class="footer__social" href="linkedin.com"
-                ><svg class="footer__icon-link" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer__contact-item">
-              <a class="footer__social" href="instagram.com"
-                ><svg class="footer__icon-link" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <form class="subscribe__form" name="subscribe" autocomplete="off">
           <p class="subscribe__title">Подпишитесь на рассылку</p>
@@ -372,5 +586,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
