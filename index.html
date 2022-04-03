@@ -203,7 +203,7 @@
           <h2 class="work__title">Чем мы занимаемся</h2>
           <ul class="work__list">
             <li class="work__list-item">
-              <img
+              <img srcset="./images/about_work/devsite.jpg, ./images/about_work/devsite@2x.jpg 2x" 
                 src="./images/about_work/devsite.jpg"
                 alt="Разработка сайтов"
                 width="370"
@@ -213,7 +213,7 @@
               </div>
             </li>
             <li class="work__list-item">
-              <img
+              <img srcset="./images/about_work/devapp.jpg, ./images/about_work/devapp@2x.jpg 2x"
                 src="./images/about_work/devapp.jpg"
                 alt="Разработка приложений"
                 width="370"
@@ -223,7 +223,7 @@
               </div>
             </li>
             <li class="work__list-item">
-              <img
+              <img srcset="./images/about_work/design.jpg, ./images/about_work/design@2x.jpg 2x"
                 src="./images/about_work/design.jpg"
                 alt="Дизайн"
                 width="370"
@@ -242,13 +242,15 @@
           <ul class="team">
             <li class="team__member">
               <picture>
-                <source srcset="./images/our_team/igor.jpg" media="(min-width: 1200px)">
-                <source srcset="./images/our_team/igor-354.jpg" media="(min-width: 768px)">
-                <source srcset="./images/our_team/igor-450.jpg" media="(max-width: 767.98px)">
+                <source srcset="./images/our_team/igor.jpg 1x, ./images/our_team/igor@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
+                <source srcset="./images/our_team/igor-354.jpg 1x, ./images/our_team/igor-354@2x.jpg 2x" media="(min-width: 768px)" type="image/jpg">
+                <source srcset="./images/our_team/igor-450.jpg 1x, ./images/our_team/igor-450@2x.jpg 2x" media="(max-width: 767.98px)" type="image/jpg">
                  <img 
                 src="./images/our_team/igor.jpg"
                 alt="Игорь Демьяненко"
-                width="100%"
+                width="270"
+                height="260"
+                loading="lazy"
               />             
               </picture>
 
@@ -291,13 +293,14 @@
             </li>
             <li class="team__member">
               <picture>
-                <source srcset="./images/our_team/olga.jpg" media="(min-width: 1200px)">
-                <source srcset="./images/our_team/olga-354.jpg" media="(min-width: 768px)">
-                <source srcset="./images/our_team/olga-450.jpg" media="(max-width: 767.98px)">
+                <source srcset="./images/our_team/olga.jpg 1x, ./images/our_team/olga@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
+                <source srcset="./images/our_team/olga-354.jpg 1x, ./images/our_team/olga-354@2x.jpg 2x" media="(min-width: 768px)" type="image/jpg">
+                <source srcset="./images/our_team/olga-450.jpg 1x, ./images/our_team/olga-450@2x.jpg 2x" media="(max-width: 767.98px)" type="image/jpg">
               <img 
                 src="./images/our_team/olga.jpg"
                 alt="Ольга Репина"
-                width="100%"
+                width="270"
+                loading="lazy"
               />                
               </picture>
 
@@ -340,13 +343,13 @@
             </li>
             <li class="team__member">
               <picture>
-                <source srcset="./images/our_team/nikola.jpg" media="(min-width: 1200px)">
-                <source srcset="./images/our_team/nikola-354.jpg" media="(min-width: 768px)">
-                <source srcset="./images/our_team/nikola-450.jpg" media="(max-width: 767.98px)">
+                <source srcset="./images/our_team/nikola.jpg 1x, ./images/our_team/nikola@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
+                <source srcset="./images/our_team/nikola-354.jpg 1x, ./images/our_team/nikola-354@2x.jpg 2x" media="(min-width: 768px)" type="image/jpg">
+                <source srcset="./images/our_team/nikola-450.jpg 1x, ./images/our_team/nikola-450@2x.jpg 2x" media="(max-width: 767.98px)" type="image/jpg">
                <img 
                 src="./images/our_team/nikola.jpg"
                 alt="Николай Тарасов"
-                width="100%"
+                width="270"
               />               
               </picture>
 
@@ -387,13 +390,13 @@
             </li>
             <li class="team__member">
               <picture>
-                <source srcset="./images/our_team/mike.jpg" media="(min-width: 1200px)">
-                <source srcset="./images/our_team/mike-354.jpg" media="(min-width: 768px)">
-                <source srcset="./images/our_team/mike-450.jpg" media="(max-width: 767.98px)">
+                <source srcset="./images/our_team/mike.jpg 1x, ./images/our_team/mike@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
+                <source srcset="./images/our_team/mike-354.jpg 1x, ./images/our_team/mike-354@2x.jpg 2x" media="(min-width: 768px)" type="image/jpg">
+                <source srcset="./images/our_team/mike-450.jpg 1x, ./images/our_team/mike-450@2x.jpg 2x" media="(max-width: 767.98px)" type="image/jpg">
               <img 
                 src="./images/our_team/mike.jpg"
                 alt="Михаил Ермаков"
-                width="100%"
+                width="270"
               />                
               </picture>
 
