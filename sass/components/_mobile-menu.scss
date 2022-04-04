@@ -54,10 +54,13 @@
 }
 
 .mobile-menu__tel {
-    font-size: 30px;
+    font-size: 34px;
     line-height: 1.18;
     color: var(--activecolor);
     margin-bottom: 32px;
+    @media screen and (max-width: 479px) {
+        font-size: 30px;
+    }
 }
 .mobile-menu_mail {
     font-size: 24px;
@@ -83,10 +86,13 @@ color: var(--secondtextcolor);
 }
 
 .mobile-menu__link-item {
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 0.02em;
 
     color: var(--activecolor);
+        @media screen and (max-width: 479px) {
+            font-size: 12px;
+        }
 }
 
 .mobile-menu__social {
