@@ -222,6 +222,8 @@ body {
 .modal {
   position: relative;
   width: 528px;
+  height: 100%;
+  max-height: 609px;
   padding: 40px;
   background-color: var(--whitetextcolor);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -260,6 +262,17 @@ body {
   line-height: 1.15;
   letter-spacing: 0.03em;
   color: var(--secondtextcolor);
+}
+
+@media screen and (max-width: 588px) {
+  .modal {
+    padding: 25px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
 }
 
 .form__item {
@@ -378,6 +391,12 @@ body {
   background-color: #2196f3;
   background-image: url("../images/icons/icon-check.svg");
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 588px) {
+  .checkbox {
+    margin-bottom: 15px;
+  }
 }
 
 .header {

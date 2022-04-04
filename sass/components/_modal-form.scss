@@ -1,4 +1,6 @@
 .form{
+  display: flex;
+  flex-direction: column;
     &__item {
   margin-bottom: 10px;
 }
@@ -110,4 +112,9 @@
   background-image: url("../images/icons/icon-check.svg");
   background-repeat: no-repeat;
 }
+}
+@media screen and (max-width: 588px) {
+  .checkbox {
+    margin-bottom: 15px;
+  }
 }
